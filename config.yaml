@@ -1,0 +1,17 @@
+name: "Hetzner IP Updater"
+version: "1.0.0"
+slug: hetzner_ip_updater
+description: "Updates your public IP address on Hetzner DNS"
+startup: "once"
+boot: "manual"
+host_network: true
+init: false
+data: true
+options:
+  hetzner_token: "YOUR_HETZNER_API_TOKEN"
+  dns_zone: "example.com"
+  dns_record_name: "home.example.com"
+schema:
+  hetzner_token: str
+  dns_zone: str
+  dns_record_name: str
