@@ -1,5 +1,12 @@
 #!/bin/bash
 
-echo "Starting Hetzner IP Updater..."
+echo "Starte Hetzner IP Updater..."
 
-python3 /update_ip.py
+PYTHON=$(command -v python3 || command -v python)
+
+if [ -z "$PYTHON" ]; then
+  echo "Python ist nicht installiert!"
+  exit 1
+fi
+
+$PYTHON /update_ip.py
