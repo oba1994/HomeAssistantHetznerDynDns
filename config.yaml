@@ -1,5 +1,5 @@
 name: "Hetzner IP Updater"
-version: "1.0.6"
+version: "1.1.0"
 slug: hetzner_ip_updater
 description: "Updates your public IP address on Hetzner DNS"
 startup: "once"
@@ -15,9 +15,9 @@ arch:
   - i386
 options:
   hetzner_token: "YOUR_HETZNER_API_TOKEN"
-  dns_zone: "example.com"
-  dns_record_name: "home.example.com"
+  zone_name: "example.com"
+  record_name: "home.example.com"
 schema:
   hetzner_token: str
-  dns_zone: str
-  dns_record_name: str
+  zone_name: str
+  record_name: str

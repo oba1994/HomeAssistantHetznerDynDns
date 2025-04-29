@@ -1,13 +1,9 @@
+---
 build_from:
-  amd64: ghcr.io/home-assistant/amd64-base:latest
-  armv7: ghcr.io/home-assistant/armv7-base:latest
-  aarch64: ghcr.io/home-assistant/aarch64-base:latest
-
-packages:
-  - python3
-  - py3-pip
-  - bash
-  - curl
-
-pip_packages:
-  - requests
+  aarch64: ghcr.io/hassio-addons/base:17.2.3
+  amd64: ghcr.io/hassio-addons/base:17.2.3
+  armhf: ghcr.io/hassio-addons/base:17.2.3
+  armv7: ghcr.io/hassio-addons/base:17.2.3
+  i386: ghcr.io/hassio-addons/base:17.2.3
+codenotary:
+  signer: codenotary@frenck.dev
