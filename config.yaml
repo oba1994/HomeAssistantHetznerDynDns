@@ -1,7 +1,7 @@
 name: "Hetzner IP Updater"
-version: "1.1.0"
+version: "2.0.0"
 slug: hetzner_ip_updater
-description: "Updates your public IP address on Hetzner DNS"
+description: "Updates your public IP address on Hetzner DNS Console"
 startup: "once"
 boot: "manual"
 host_network: true
@@ -14,10 +14,12 @@ arch:
   - armv7
   - i386
 options:
-  hetzner_token: "YOUR_HETZNER_API_TOKEN"
+  hetzner_cloud_token: "YOUR_HETZNER_Console_API_TOKEN"
   zone_name: "example.com"
   record_name: "home.example.com"
+  record_type: "A"
 schema:
-  hetzner_token: str
+  hetzner_cloud_token: str
   zone_name: str
   record_name: str
+  record_type: list(A|AAAA|Both)
