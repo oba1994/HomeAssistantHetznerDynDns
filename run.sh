@@ -90,7 +90,7 @@ update_record() {
         -H "$AUTH_HEADER" \
         -H "Content-Type: application/json" \
         -d "$PAYLOAD" \
-        "https://api.hetzner.cloud/v1/zones/$ZONE_ID/rrsets/$RECORD_NAME/$TYPE/actions/set_records' "
+        "https://api.hetzner.cloud/v1/zones/$ZONE_ID/rrsets/$RECORD_NAME/$TYPE/actions/set_records"
     )
 
     echo "$TYPE aktualisiert auf $TARGET_IP"
