@@ -1,5 +1,5 @@
 name: "Hetzner IP Updater"
-version: "2.0.4"
+version: "2.0.5"
 slug: hetzner_ip_updater
 description: "Updates your public IP address on Hetzner DNS Console"
 startup: "once"

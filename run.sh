@@ -80,8 +80,7 @@ update_record() {
         '{
             records: [
                 {
-                    value: $ip,
-                    comment: "Changed through HA AddOn"
+                    value: $ip
                 }
             ]
         }')
