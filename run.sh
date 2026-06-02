@@ -87,11 +87,11 @@ update_record() {
         }')
 
     RESPONSE=$(
-    curl "https://api.hetzner.cloud/v1/zones/$ZONE_ID/rrsets/$RECORD_NAME/$TYPE/actions/set_records' " \
-        -X Post \
+    curl -X POST \
         -H "$AUTH_HEADER" \
         -H "Content-Type: application/json" \
         -d "$PAYLOAD" \
+        "https://api.hetzner.cloud/v1/zones/$ZONE_ID/rrsets/$RECORD_NAME/$TYPE/actions/set_records' "
     )
 
     echo "$TYPE aktualisiert auf $TARGET_IP"
